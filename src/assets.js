@@ -1,5 +1,6 @@
 export const assets = {
   logo: '/02-1.png',
+  logoGlow: '/logo1.png',
   hrOffice:
     '/modern_bright_european_corporate_office_workplace_with_bulgarian_hr_specialists.png',
   sofiaOffice:
