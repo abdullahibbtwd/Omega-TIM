@@ -20,10 +20,10 @@ function TabButton({ active, children, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-150 whitespace-nowrap ${
+      className={`whitespace-nowrap rounded-full px-3 py-2 text-[11px] font-semibold transition-all duration-150 sm:px-4 sm:py-2.5 sm:text-sm ${
         active
           ? 'bg-indigo-600 text-white shadow-sm'
-          : 'bg-slate-100 text-slate-600 hover:text-slate-900 border border-slate-200'
+          : 'border border-slate-200 bg-slate-100 text-slate-600 hover:text-slate-900'
       }`}
     >
       {children}
@@ -41,10 +41,10 @@ function LswinPane() {
           <BadgeCheck className="w-3.5 h-3.5" />
           {t('products.lswin.badge')}
         </div>
-        <h3 className="font-display text-2xl lg:text-3xl font-bold text-slate-900">
+        <h3 className="font-display text-xl font-semibold text-slate-900 sm:text-2xl sm:font-bold lg:text-3xl">
           {t('products.lswin.title')}
         </h3>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+        <p className="text-xs leading-relaxed text-slate-600 sm:text-sm lg:text-base">
           {t('products.lswin.body')}
         </p>
 
@@ -89,11 +89,11 @@ function LswinPane() {
 
         <div className="pt-2">
           <a
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-indigo-600 text-white text-sm font-semibold shadow hover:bg-indigo-700 transition-all"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-4 py-2 text-xs font-semibold text-white shadow transition-all hover:bg-indigo-700 sm:gap-2 sm:px-5 sm:py-2.5 sm:text-sm"
             href="#demo"
           >
             {t('products.lswin.cta')}
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </div>
@@ -148,16 +148,16 @@ function RzwinPane() {
           <Calculator className="w-3.5 h-3.5" />
           {t('products.rzwin.badge')}
         </div>
-        <h3 className="font-display text-2xl lg:text-3xl font-bold text-slate-900">
+        <h3 className="font-display text-xl font-semibold text-slate-900 sm:text-2xl sm:font-bold lg:text-3xl">
           {t('products.rzwin.title')}
         </h3>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+        <p className="text-xs leading-relaxed text-slate-600 sm:text-sm lg:text-base">
           {t('products.rzwin.body')}
         </p>
-        <ul className="space-y-2.5 text-sm text-slate-600">
+        <ul className="space-y-2 text-xs text-slate-600 sm:space-y-2.5 sm:text-sm">
           {items.map((item) => (
             <li key={item} className="flex items-center gap-2">
-              <CircleCheck className="w-4 h-4 text-teal-600 shrink-0" />
+              <CircleCheck className="h-4 w-4 shrink-0 text-teal-600" />
               <span>{item}</span>
             </li>
           ))}
@@ -198,7 +198,7 @@ function RzwinPane() {
               <span className="text-xs sm:text-sm">
                 {t('products.rzwin.netPayout')}
               </span>
-              <span className="font-mono text-indigo-700 font-extrabold text-sm sm:text-base tabular-nums-enterprise shrink-0">
+              <span className="shrink-0 font-mono text-sm font-bold tabular-nums-enterprise text-indigo-700 sm:text-base sm:font-extrabold">
                 BGN 2,830.77
               </span>
             </div>
@@ -219,19 +219,19 @@ function Ac2012Pane() {
           <Landmark className="w-3.5 h-3.5" />
           {t('products.ac2012.badge')}
         </div>
-        <h3 className="font-display text-2xl lg:text-3xl font-bold text-slate-900">
+        <h3 className="font-display text-xl font-semibold text-slate-900 sm:text-2xl sm:font-bold lg:text-3xl">
           {t('products.ac2012.title')}
         </h3>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+        <p className="text-xs leading-relaxed text-slate-600 sm:text-sm lg:text-base">
           {t('products.ac2012.body')}
         </p>
-        <ul className="space-y-2.5 text-sm text-slate-600">
+        <ul className="space-y-2 text-xs text-slate-600 sm:space-y-2.5 sm:text-sm">
           <li className="flex items-center gap-2">
-            <CircleCheck className="w-4 h-4 text-teal-600 shrink-0" />
+            <CircleCheck className="h-4 w-4 shrink-0 text-teal-600" />
             <span>{t('products.ac2012.item1')}</span>
           </li>
           <li className="flex items-center gap-2">
-            <CircleCheck className="w-4 h-4 text-teal-600 shrink-0" />
+            <CircleCheck className="h-4 w-4 shrink-0 text-teal-600" />
             <span>{t('products.ac2012.item2')}</span>
           </li>
         </ul>
@@ -284,10 +284,10 @@ function SimplePane({ icon: Icon, title, description, tags }) {
   return (
     <div className="max-w-3xl mx-auto text-center py-8">
       <Icon className="w-10 h-10 text-indigo-600 mx-auto mb-3" />
-      <h3 className="font-display text-2xl font-bold text-slate-900 mb-2">
+      <h3 className="mb-2 font-display text-xl font-semibold text-slate-900 sm:text-2xl sm:font-bold">
         {title}
       </h3>
-      <p className="text-slate-600 text-sm leading-relaxed mb-6">{description}</p>
+      <p className="mb-6 text-xs leading-relaxed text-slate-600 sm:text-sm">{description}</p>
       <div className="inline-flex flex-wrap justify-center gap-4 text-xs font-semibold">
         {tags.map((tag) => (
           <span
@@ -307,18 +307,18 @@ export default function Products() {
   const [active, setActive] = useState('lswin')
 
   return (
-    <section className="py-20 bg-white border-b border-slate-200" id="products">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3 tracking-tight">
+    <section className="border-b border-slate-200 bg-white py-10 sm:py-20" id="products">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+        <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-12">
+          <h2 className="mb-2 font-display text-2xl font-semibold tracking-tight text-slate-900 sm:mb-3 sm:text-3xl sm:font-bold lg:text-4xl">
             {t('products.title')}
           </h2>
-          <p className="text-base text-slate-600 leading-relaxed">
+          <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
             {t('products.subtitle')}
           </p>
         </div>
 
-        <div className="flex items-center justify-start lg:justify-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
+        <div className="no-scrollbar mb-6 flex items-center justify-start gap-2 overflow-x-auto pb-3 sm:mb-8 sm:pb-4 lg:justify-center">
           {TAB_IDS.map((id) => (
             <TabButton
               key={id}
@@ -330,7 +330,7 @@ export default function Products() {
           ))}
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-[#F8FAFC] p-6 lg:p-10 shadow-sm min-h-[460px]">
+        <div className="min-h-[360px] rounded-2xl border border-slate-200 bg-[#F8FAFC] p-4 shadow-sm sm:min-h-[460px] sm:p-6 lg:p-10">
           {active === 'lswin' && <LswinPane />}
           {active === 'rzwin' && <RzwinPane />}
           {active === 'ac2012' && <Ac2012Pane />}

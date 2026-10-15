@@ -14,31 +14,31 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-white border-t border-slate-200 text-slate-600 text-sm">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+    <footer className="border-t border-slate-200 bg-white text-sm text-slate-600">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-12">
+        <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:mb-12 lg:grid-cols-4 lg:gap-10">
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
+            <div className="mb-4 flex items-center gap-2.5">
               <img
                 src={assets.logo}
                 alt="Omega-TIM"
-                className="h-8 w-auto logo-on-light"
+                className="logo-on-light h-7 w-auto sm:h-8"
               />
             </div>
-            <p className="text-xs text-slate-500 mb-4 leading-relaxed">
+            <p className="mb-4 text-[11px] leading-relaxed text-slate-500 sm:text-xs">
               {t('footer.blurb')}
             </p>
-            <div className="flex items-center gap-2 text-xs font-semibold text-teal-700">
-              <ShieldCheck className="w-4 h-4" />
+            <div className="flex items-center gap-2 text-[11px] font-semibold text-teal-700 sm:text-xs">
+              <ShieldCheck className="h-4 w-4" />
               <span>{t('footer.iso')}</span>
             </div>
-            <div className="text-xs text-slate-500 mt-2 font-medium">
+            <div className="mt-2 text-[11px] font-medium text-slate-500 sm:text-xs">
               {t('footer.hq')}
             </div>
           </div>
 
           <div>
-            <div className="font-display font-bold text-slate-900 text-sm mb-4">
+            <div className="mb-3 font-display text-xs font-semibold text-slate-900 sm:mb-4 sm:text-sm sm:font-bold">
               {t('footer.modules')}
             </div>
             <ul className="space-y-2 text-xs font-medium text-slate-600">
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="font-display font-bold text-slate-900 text-sm mb-4">
+            <div className="mb-3 font-display text-xs font-semibold text-slate-900 sm:mb-4 sm:text-sm sm:font-bold">
               {t('footer.resources')}
             </div>
             <ul className="space-y-2 text-xs font-medium text-slate-600">
@@ -96,14 +96,14 @@ export default function Footer() {
           </div>
 
           <div id="support">
-            <div className="font-display font-bold text-slate-900 text-sm mb-4">
+            <div className="mb-3 font-display text-xs font-semibold text-slate-900 sm:mb-4 sm:text-sm sm:font-bold">
               {t('footer.support')}
             </div>
-            <div className="space-y-2.5 text-xs text-slate-600">
+            <div className="space-y-2.5 text-[11px] text-slate-600 sm:text-xs">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-indigo-600" />
+                <Phone className="h-4 w-4 text-indigo-600" />
                 <a
-                  className="font-bold text-slate-900 hover:text-indigo-600 transition-colors"
+                  className="font-semibold text-slate-900 transition-colors hover:text-indigo-600 sm:font-bold"
                   href="tel:070011250"
                 >
                   0700 11 250
@@ -134,7 +134,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-200 text-center text-xs text-slate-500">
+        <div className="border-t border-slate-200 pt-6 text-center text-[11px] text-slate-500 sm:pt-8 sm:text-xs">
           <p>{t('footer.copyright')}</p>
         </div>
       </div>

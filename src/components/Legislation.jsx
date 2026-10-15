@@ -64,102 +64,102 @@ export default function Legislation() {
 
   return (
     <section
-      className="py-20 bg-white border-b border-slate-200"
+      className="border-b border-slate-200 bg-white py-10 sm:py-20"
       id="legislation"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+        <div className="mb-8 flex flex-col justify-between md:mb-12 md:flex-row md:items-end">
           <div>
-            <span className="text-indigo-600 font-semibold text-xs uppercase tracking-wider">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-indigo-600 sm:text-xs">
               {t('legislation.eyebrow')}
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-1">
+            <h2 className="mt-1 font-display text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl sm:font-bold lg:text-4xl">
               {t('legislation.title')}
             </h2>
           </div>
-          <div className="mt-4 md:mt-0">
+          <div className="mt-3 md:mt-0">
             <a
-              className="inline-flex items-center gap-1 text-sm font-semibold text-indigo-600 hover:text-indigo-700"
+              className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600 hover:text-indigo-700 sm:text-sm"
               href="#all-updates"
             >
               {t('legislation.archive')}
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="h-4 w-4" />
             </a>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
-            <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-200 gap-3">
-              <div className="flex items-center gap-2.5">
-                <Terminal className="w-5 h-5 text-indigo-600" />
-                <h3 className="font-display font-bold text-slate-900 text-lg">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6 lg:p-8">
+            <div className="mb-5 flex items-center justify-between gap-3 border-b border-slate-200 pb-3 sm:mb-6 sm:pb-4">
+              <div className="flex min-w-0 items-center gap-2 sm:gap-2.5">
+                <Terminal className="h-4 w-4 shrink-0 text-indigo-600 sm:h-5 sm:w-5" />
+                <h3 className="font-display text-base font-semibold text-slate-900 sm:text-lg sm:font-bold">
                   {t('legislation.buildsTitle')}
                 </h3>
               </div>
-              <span className="px-2.5 py-1 rounded font-mono text-xs bg-indigo-50 text-indigo-700 font-semibold border border-indigo-100 shrink-0">
+              <span className="shrink-0 rounded border border-indigo-100 bg-indigo-50 px-2 py-0.5 font-mono text-[10px] font-semibold text-indigo-700 sm:px-2.5 sm:py-1 sm:text-xs">
                 {t('legislation.channels')}
               </span>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {builds.map((item) => (
                 <div
                   key={item.title}
-                  className={`relative pl-6 border-l-2 ${
+                  className={`relative border-l-2 pl-5 sm:pl-6 ${
                     item.active ? 'border-indigo-600' : 'border-slate-200'
                   }`}
                 >
                   <div
-                    className={`absolute -left-1.5 top-0.5 w-3 h-3 rounded-full ${
+                    className={`absolute -left-1.5 top-0.5 h-3 w-3 rounded-full ${
                       item.active
                         ? 'bg-indigo-600 ring-4 ring-indigo-100'
                         : 'bg-slate-300'
                     }`}
                   />
-                  <div className="flex items-center justify-between mb-1 gap-2">
-                    <span className="font-bold text-slate-900 text-sm">
+                  <div className="mb-1 flex items-center justify-between gap-2">
+                    <span className="text-xs font-semibold text-slate-900 sm:text-sm sm:font-bold">
                       {item.title}
                     </span>
-                    <span className="font-mono text-xs text-slate-400 shrink-0">
+                    <span className="shrink-0 font-mono text-[10px] text-slate-400 sm:text-xs">
                       {item.date}
                     </span>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600">{item.body}</p>
+                  <p className="text-[11px] text-slate-600 sm:text-sm">{item.body}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 sm:gap-4">
             {bulletins.map((b) => {
               const Icon = b.icon
               return (
                 <div
                   key={b.title}
-                  className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-indigo-300 transition-all shadow-sm group"
+                  className="group rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:border-indigo-300 sm:p-5"
                 >
                   <div className="flex items-start justify-between">
-                    <div>
+                    <div className="min-w-0">
                       <span
-                        className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-0.5 rounded border mb-2 ${b.badgeClass}`}
+                        className={`mb-2 inline-flex items-center gap-1.5 rounded border px-2 py-0.5 text-[10px] font-semibold sm:px-2.5 sm:text-xs ${b.badgeClass}`}
                       >
-                        <Icon className="w-3 h-3" />
+                        <Icon className="h-3 w-3" />
                         {b.badge}
                       </span>
-                      <h4 className="font-display font-bold text-slate-900 text-base group-hover:text-indigo-600 transition-colors">
+                      <h4 className="font-display text-sm font-semibold text-slate-900 transition-colors group-hover:text-indigo-600 sm:text-base sm:font-bold">
                         {b.title}
                       </h4>
-                      <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                      <p className="mt-1.5 text-[11px] leading-relaxed text-slate-600 sm:text-xs">
                         {b.body}
                       </p>
                     </div>
                     <a
-                      className="p-2 rounded-lg bg-slate-50 text-indigo-600 hover:bg-indigo-50 border border-slate-200 transition-colors shrink-0 ml-3"
+                      className="ml-3 shrink-0 rounded-lg border border-slate-200 bg-slate-50 p-1.5 text-indigo-600 transition-colors hover:bg-indigo-50 sm:p-2"
                       href={b.href}
                       aria-label={t('legislation.download', { title: b.title })}
                     >
-                      <Download className="w-5 h-5" />
+                      <Download className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
                   </div>
                 </div>

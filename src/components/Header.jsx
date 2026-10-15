@@ -139,7 +139,7 @@ export default function Header() {
               {t('nav.login')}
             </a>
             <a
-              className="hidden whitespace-nowrap rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-indigo-700 active:scale-95 sm:inline-flex sm:items-center sm:justify-center"
+              className="hidden whitespace-nowrap rounded-lg bg-indigo-600 px-2.5 py-1.5 text-[11px] font-semibold text-white shadow transition-all hover:bg-indigo-700 active:scale-95 sm:inline-flex sm:items-center sm:justify-center sm:px-4 sm:py-2 sm:text-sm"
               href="#demo"
             >
               {t('nav.requestDemo')}
