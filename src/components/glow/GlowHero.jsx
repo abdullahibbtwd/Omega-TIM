@@ -67,16 +67,16 @@ export default function GlowHero() {
         {t('glow.subtitle')}
       </p>
 
-      <div className="mb-8 flex w-full max-w-md flex-col items-stretch gap-2.5 sm:mb-10 sm:max-w-none sm:w-auto sm:flex-row sm:items-center sm:gap-4">
+      <div className="mb-8 flex w-full flex-col items-stretch gap-2.5 sm:mb-10 sm:w-auto sm:flex-row sm:items-center sm:gap-4">
         <a
           href="#demo"
-          className="w-full rounded-lg bg-gradient-to-r from-g-sc to-g-secondary px-5 py-2.5 text-center text-xs font-semibold text-g-lowest shadow-[0_0_24px_rgba(253,139,0,0.35)] transition-all duration-150 hover:shadow-[0_0_30px_rgba(253,139,0,0.55)] active:scale-[0.98] sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
+          className="w-full whitespace-nowrap rounded-lg bg-gradient-to-r from-g-sc to-g-secondary px-5 py-2.5 text-center text-xs font-semibold text-g-lowest shadow-[0_0_24px_rgba(253,139,0,0.35)] transition-all duration-150 hover:shadow-[0_0_30px_rgba(253,139,0,0.55)] active:scale-[0.98] sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
         >
           {t('glow.bookDemo')}
         </a>
         <a
           href="#modules"
-          className="w-full rounded-lg border border-g-pc bg-g-container px-5 py-2.5 text-center text-xs font-semibold text-g-primary transition-all duration-150 hover:border-g-primary hover:bg-g-high active:scale-[0.98] sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
+          className="w-full whitespace-nowrap rounded-lg border border-g-pc bg-g-container px-5 py-2.5 text-center text-xs font-semibold text-g-primary transition-all duration-150 hover:border-g-primary hover:bg-g-high active:scale-[0.98] sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
         >
           {t('glow.explore')}
         </a>

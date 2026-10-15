@@ -80,16 +80,16 @@ export default function BreezeHero() {
           {t('breeze.subtitle')}
         </p>
 
-        <div className="mb-6 flex w-full max-w-md flex-col items-stretch justify-center gap-2.5 sm:mb-6 sm:flex-row sm:items-center sm:gap-4">
+        <div className="mb-6 flex w-full flex-col items-stretch justify-center gap-2.5 sm:mb-6 sm:w-auto sm:flex-row sm:items-center sm:gap-4">
           <a
             href="#demo"
-            className="inline-flex w-full items-center justify-center rounded bg-br-cta px-5 py-2.5 text-xs font-semibold text-white shadow-level1 transition-all duration-200 hover:bg-br-cta-hover hover:shadow-level2 sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
+            className="inline-flex w-full items-center justify-center whitespace-nowrap rounded bg-br-cta px-5 py-2.5 text-xs font-semibold text-white shadow-level1 transition-all duration-200 hover:bg-br-cta-hover hover:shadow-level2 sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
           >
             {t('breeze.bookDemo')}
           </a>
           <a
             href="#modules-bento"
-            className="inline-flex w-full items-center justify-center rounded border border-br-border bg-br-lowest px-5 py-2.5 text-xs font-semibold text-br-pc shadow-level1 transition-all duration-200 hover:border-br-pc hover:bg-br-canvas sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
+            className="inline-flex w-full items-center justify-center whitespace-nowrap rounded border border-br-border bg-br-lowest px-5 py-2.5 text-xs font-semibold text-br-pc shadow-level1 transition-all duration-200 hover:border-br-pc hover:bg-br-canvas sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
           >
             {t('breeze.explore')}
           </a>
